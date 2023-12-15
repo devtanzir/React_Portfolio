@@ -13,52 +13,71 @@ import Article6 from "../../public/images/articles/todo list app built using rea
 import Article7 from "../../public/images/articles/What is Redux with easy explanation.png";
 import Article8 from "../../public/images/articles/What is higher order component in React.jpg";
 import { motion, useMotionValue } from "framer-motion";
+import Transition from "@/components/Transition";
 
 const FramerImage = motion(Image);
 
 const MovingImage = ({ title, img, link }) => {
-    const x = useMotionValue(0);
-    const y = useMotionValue(0);
-    const imgRef = useRef(null);
+  const x = useMotionValue(0);
+  const y = useMotionValue(0);
+  const imgRef = useRef(null);
 
-    function handMouse (e) {
-        imgRef.current.style.display = "inline-block";
-        x.set(e.pageX);
-        y.set(-10);
-    }
+  function handMouse(e) {
+    imgRef.current.style.display = "inline-block";
+    x.set(e.pageX);
+    y.set(-10);
+  }
 
-    function handMouseLeve (e) {
-        imgRef.current.style.display = "none";
-        x.set(0);
-        y.set(0);
-    }
+  function handMouseLeve(e) {
+    imgRef.current.style.display = "none";
+    x.set(0);
+    y.set(0);
+  }
 
   return (
-    <Link href={link} target="_blank"
-    onMouseMove={handMouse}
-    onMouseLeave={handMouseLeve}>
+    <Link
+      href={link}
+      target="_blank"
+      onMouseMove={handMouse}
+      onMouseLeave={handMouseLeve}
+    >
       <h2 className="capitalize text-xl font-semibold hover:underline">
         {title}
       </h2>
       <FramerImage
-      style={{x:x, y:y}} initial={{opacity:0}} whileInView={{opacity: 1}} transition={{duration:0.2}} ref={imgRef} src={img} alt={title} className="z-10 w-96 h-auto hidden absolute rounded-lg"/>
+        style={{ x: x, y: y }}
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.2 }}
+        ref={imgRef}
+        src={img}
+        alt={title}
+        className="z-10 w-96 h-auto hidden absolute rounded-lg md:!hidden"
+      />
     </Link>
   );
 };
 
 const Articles = ({ img, title, date, link }) => {
   return (
-    <motion.li initial={{y:200}} whileInView={{y:0, transition:{duration:0.5, ease:"easeInOut"}}} viewport={{once:true}} className="relative w-full p-4 py-6 my-4 rounded-xl flex items-center justify-between bg-light text-dark first:mt-0 border border-solid border-dark border-r-4 border-b-4">
+    <motion.li
+      initial={{ y: 200 }}
+      whileInView={{ y: 0, transition: { duration: 0.5, ease: "easeInOut" } }}
+      viewport={{ once: true }}
+      className="relative w-full p-4 py-6 my-4 rounded-xl flex items-center justify-between bg-light dark:bg-dark dark:text-light dark:border-light text-dark first:mt-0 border border-solid border-dark border-r-4 border-b-4 sm:flex-col"
+    >
       <MovingImage title={title} img={img} link={link} />
-      <span className="text-primary font-semibold pl-4">{date}</span>
+      <span className="text-primary dark:text-primaryDark font-semibold pl-4 sm:self-start sm:pl-0 xs:text-sm">
+        {date}
+      </span>
     </motion.li>
   );
 };
 
 const FeaturedArticle = ({ img, title, time, summary, link }) => {
   return (
-    <li className="col-span-1 w-full p-4 bg-light border border-solid border-dark rounded-2xl relative">
-      <div className="absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2.5rem] bg-dark rounded-br-3xl" />
+    <li className="col-span-1 w-full p-4 bg-light dark:bg-dark dark:border-light border border-solid border-dark rounded-2xl relative">
+      <div className="absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2.5rem] dark:bg-light bg-dark rounded-br-3xl" />
 
       <Link
         href={link}
@@ -71,15 +90,21 @@ const FeaturedArticle = ({ img, title, time, summary, link }) => {
           whileHover={{ scale: 1.05 }}
           transition={{ duration: 0.2 }}
           className="w-full h-auto"
+          priority
+          sizes="(max-width: 768px) 100vw,
+                (max-width: 1200px) 50vw,
+                50vw"
         />
       </Link>
       <Link href={link} target="_blank">
-        <h2 className="capitalize text-2xl font-bold my-2 mt-4 hover:underline underline-offset-2">
+        <h2 className="capitalize text-2xl font-bold my-2 mt-4 hover:underline underline-offset-2 xs:text-lg">
           {title}
         </h2>
       </Link>
       <p className="text-sm mb-2">{summary}</p>
-      <span className="text-primary font-semibold">{time}</span>
+      <span className="text-primary dark:text-primaryDark font-semibold">
+        {time}
+      </span>
     </li>
   );
 };
@@ -91,10 +116,14 @@ const articles = () => {
         <title>TanzirIbneAli | Article Page</title>
         <meta name="description" content="any description" />
       </Head>
-      <main className="w-full mb-16 flex flex-col items-center justify-center overflow-hidden">
+      <Transition />
+      <main className="w-full mb-16 flex flex-col items-center justify-center overflow-hidden dark:text-light">
         <Layout className="pt-16">
-          <AnimatedText text="Words Can Change The World!" className="mb-16" />
-          <ul className="grid grid-cols-2 gap-16">
+          <AnimatedText
+            text="Words Can Change The World!"
+            className="mb-16 lg:!text-7xl sm:mb-8 sm:!text-6xl xs:!text-4xl"
+          />
+          <ul className="grid grid-cols-2 gap-16 md:grid-cols-1 lg:gap-8 md:gap-y-16">
             <FeaturedArticle
               title="Build A Custom Pagination Component In Reactjs From Scratch"
               img={Article1}
