@@ -148,11 +148,11 @@ const Navbar = () => {
         <button
           onClick={() => setMode(mode === "light" ? "dark" : "light")}
           className={`ml-3 flex items-center justify-center rounded-full p-1
-        ${mode === "light" ? "bg-dark text-light" : "bg-light text-dark"}
+        ${mode === "light" ? "bg-dark text-light w-6 h-6 ease ml-3 flex items-center justify-center rounded-full p-1  " : "bg-light text-dark w-6 h-6 ease ml-3 flex items-center justify-center rounded-full p-1 "}
         `}
         >
           {mode === "dark" ? (
-            <SunIcon className={"fill-dark"} />
+            <SunIcon className={"fill-dark "} />
           ) : (
             <MoonIcon className={"fill-dark"} />
           )}
@@ -179,7 +179,7 @@ const Navbar = () => {
       
             <nav className="flex items-center justify-center flex-wrap mt-2">
               <motion.a
-                href="https://twitter.com"
+                href="https://twitter.com/TanzirIbneAli"
                 target={"_blank"}
                 whileHover={{ y: -2 }}
                 className="w-6 mr-3 sm:mx-1"
@@ -188,7 +188,7 @@ const Navbar = () => {
                 <TwitterIcon />
               </motion.a>
               <motion.a
-                href="https://twitter.com"
+                href="https://github.com/devtanzir"
                 target={"_blank"}
                 whileHover={{ y: -2 }}
                 className="w-6 mx-3 bg-light rounded-full dark:bg-dark sm:mx-1"
@@ -197,7 +197,7 @@ const Navbar = () => {
                 <GithubIcon />
               </motion.a>
               <motion.a
-                href="https://twitter.com"
+                href="https://www.linkedin.com/in/tanziribneali/"
                 target={"_blank"}
                 whileHover={{ y: -2 }}
                 className="w-6 mx-3 sm:mx-1"
@@ -206,7 +206,7 @@ const Navbar = () => {
                 <LinkedInIcon />
               </motion.a>
               <motion.a
-                href="https://twitter.com"
+                href="https://www.facebook.com/tanziribneali.me"
                 target={"_blank"}
                 whileHover={{ y: -2 }}
                 className="w-6 mx-3 sm:mx-1"
@@ -218,7 +218,7 @@ const Navbar = () => {
                 href="https://twitter.com"
                 target={"_blank"}
                 whileHover={{ y: -2 }}
-                className="w-6 ml-3 sm:mx-1"
+                className="w-6 mx-3 sm:mx-1"
                 whileTap={{ scale: 0.9 }}
               >
                 <DribbbleIcon />
