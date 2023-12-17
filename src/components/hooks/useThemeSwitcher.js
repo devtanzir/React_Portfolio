@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const useThemeSwitcher = () => {
 
@@ -39,7 +39,6 @@ const useThemeSwitcher = () => {
         return () => mediaQuery.removeEventListener("change", haldleChange);
     },[])
 
-    console.log(mode);
 
     useEffect(() => {
         if(mode === "dark"){

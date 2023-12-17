@@ -44,25 +44,22 @@ const Education = () => {
         />
         <ul className="w-full flex flex-col items-start justify-between ml-4 xs:ml-2">
           <Details
-            type="Bachelor Of Science In Computer Science"
-            time="2016-2020"
-            place="Massachusetts Institute Of Technology (MIT)"
-            info="Relevant courses included Data Structures and Algorithms, Computer Systems Engineering, and Artificial 
-            Intelligence."
+            type="Dakhil Examination"
+            time="2019"
+            place="Madrasah E Baitul Mamur."
+            info="My Subject was Science. In Relevant courses I involve with my own Business. I Started With a Small Business and i like it."
           />
           <Details
-            type="Master Of Computer Science"
-            time="2020-2022"
-            place="Stanford University"
-            info="Completed a master's project on deep learning, developing a new neural network architecture for natural 
-            language understanding."
+            type="Alim Examination"
+            time="2021"
+            place="Hazrat Shah Ali Bgrh Kamil Madrash."
+            info="I Completed my Alim Examination With Science Divition. but it was a very lengthy Prosess for coronavirus."
           />
           <Details
-            type="Online Coursework"
-            time="2016-2020"
-            place="Coursera And EdX"
-            info="Completed coursework in advanced topics such as Reinforcement Learning, Computer Vision, and Machine 
-            Learning Engineering."
+            type="Hon’s Running"
+            time="2026"
+            place="Alhaj Mockbul Hossain University College"
+            info="Now I'M entered the world of Programing. I Strongly believe That It Will my future. Complated MERN Stack Course and Working on a Project. "
           />
         </ul>
       </div>

@@ -3,11 +3,11 @@ import React, { useState } from "react";
 import Logo from "./Logo";
 import { useRouter } from "next/router";
 import {
-  DribbbleIcon,
+  CodepenIcon,
   GithubIcon,
   LinkedInIcon,
   MoonIcon,
-  PinterestIcon,
+  FacebookIcon,
   SunIcon,
   TwitterIcon,
 } from "./Icons";
@@ -100,7 +100,7 @@ const Navbar = () => {
 
       <nav className="flex items-center justify-center flex-wrap">
         <motion.a
-          href="https://twitter.com"
+          href="https://twitter.com/TanzirIbneAli"
           target={"_blank"}
           whileHover={{ y: -2 }}
           className="w-6 mx-3"
@@ -109,7 +109,7 @@ const Navbar = () => {
           <TwitterIcon />
         </motion.a>
         <motion.a
-          href="https://twitter.com"
+          href="https://github.com/devtanzir"
           target={"_blank"}
           whileHover={{ y: -2 }}
           className="w-6 mx-3"
@@ -118,7 +118,7 @@ const Navbar = () => {
           <GithubIcon />
         </motion.a>
         <motion.a
-          href="https://twitter.com"
+          href="https://www.linkedin.com/in/tanziribneali/"
           target={"_blank"}
           whileHover={{ y: -2 }}
           className="w-6 mx-3"
@@ -127,22 +127,22 @@ const Navbar = () => {
           <LinkedInIcon />
         </motion.a>
         <motion.a
-          href="https://twitter.com"
+          href="https://www.facebook.com/tanziribneali.me"
           target={"_blank"}
           whileHover={{ y: -2 }}
           className="w-6 mx-3"
           whileTap={{ scale: 0.9 }}
         >
-          <PinterestIcon />
+          <FacebookIcon />
         </motion.a>
         <motion.a
-          href="https://twitter.com"
+          href="https://codepen.io/TANZIR-IBNE-ALI/pens/showcase"
           target={"_blank"}
           whileHover={{ y: -2 }}
-          className="w-6 ml-3"
+          className="w-6 mx-3"
           whileTap={{ scale: 0.9 }}
         >
-          <DribbbleIcon />
+          <CodepenIcon />
         </motion.a>
 
         <button
@@ -212,22 +212,22 @@ const Navbar = () => {
                 className="w-6 mx-3 sm:mx-1"
                 whileTap={{ scale: 0.9 }}
               >
-                <PinterestIcon />
+                <FacebookIcon />
               </motion.a>
               <motion.a
-                href="https://twitter.com"
+                href="https://codepen.io/TANZIR-IBNE-ALI/pens/showcase"
                 target={"_blank"}
                 whileHover={{ y: -2 }}
                 className="w-6 mx-3 sm:mx-1"
                 whileTap={{ scale: 0.9 }}
               >
-                <DribbbleIcon />
+                <CodepenIcon />
               </motion.a>
       
               <button
                 onClick={() => setMode(mode === "light" ? "dark" : "light")}
                 className={`ml-3 flex items-center justify-center rounded-full p-1
-              ${mode === "light" ? "bg-dark text-light" : "bg-light text-dark"}
+              ${mode === "light" ? "bg-dark text-light w-6 h-6 ease ml-3 sm:ml-1 flex items-center justify-center rounded-full p-1  " : "bg-light text-dark w-6 h-6 ease ml-3 sm:ml-1 flex items-center justify-center rounded-full p-1 "}
               `}
               >
                 {mode === "dark" ? (

@@ -52,15 +52,15 @@ const about = () => {
                 Biography
               </h2>
               <p className="font-medium">
-                Hi, I'm CodeBucks, a web developer and UI/UX designer with a
+                Hi, I'm Tanzir Ibne Ali, a web developer and MERN Developer with a
                 passion for creating beautiful, functional, and user-centered
-                digital experiences. With 4 years of experience in the field. I
+                digital experiences. With 1.5 years of experience in the field. I
                 am always looking for new and innovative ways to bring my
                 clients' visions to life.
               </p>
               <p className="my-4 font-medium">
-                I believe that design is about more than just making things look
-                pretty it's about solving problems and creating intuitive,
+                I believe that Development is about more than just making things look
+                Functional. it's about solving problems and creating intuitive,
                 enjoyable experiences for users.
               </p>
               <p className="font-medium">
@@ -88,7 +88,7 @@ const about = () => {
             <div className="col-span-2 flex flex-col items-end justify-between xl:col-span-8 xl:flex-row xl:items-center md:order-3">
               <div className=" flex flex-col items-end justify-center xl:items-center">
                 <span className="inline-block text-7xl font-bold md:text-6xl sm:text-5xl xs:text-4xl">
-                  <AnimatedNumbers value={50} />+
+                  <AnimatedNumbers value={10} />+
                 </span>
                 <h2 className="text-xl font-medium capitalize text-dark/75  dark:text-light/75 xl:text-center md:text-lg sm:text-base xs:text-sm">
                   satisfied clients
@@ -97,7 +97,7 @@ const about = () => {
 
               <div className=" flex flex-col items-end justify-center xl:items-center">
                 <span className="inline-block text-7xl font-bold md:text-6xl sm:text-5xl xs:text-4xl">
-                  <AnimatedNumbers value={40} />+
+                  <AnimatedNumbers value={7} />+
                 </span>
                 <h2 className="text-xl font-medium capitalize text-dark/75 dark:text-light/75 xl:text-center md:text-lg sm:text-base xs:text-sm">
                   projects completed
@@ -106,7 +106,7 @@ const about = () => {
 
               <div className=" flex flex-col items-end justify-center xl:items-center">
                 <span className="inline-block text-7xl font-bold md:text-6xl sm:text-5xl xs:text-4xl">
-                  <AnimatedNumbers value={4} />+
+                  <AnimatedNumbers value={2} />+
                 </span>
                 <h2 className="text-xl font-medium capitalize text-dark/75 dark:text-light/75 xl:text-center md:text-lg sm:text-base xs:text-sm">
                   years of experience
