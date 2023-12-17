@@ -39,7 +39,7 @@ const about = () => {
     <>
       <Head>
         <title>TanzirIbneAli | About Page</title>
-        <meta name="description" content="any description" />
+        <meta name="description" content="This Portfolio is build with ❤ by Tanzir Ibne Ali" />
       </Head>
       <Transition />
       <main className="flex w-full flex-col items-center justify-center dark:text-light">

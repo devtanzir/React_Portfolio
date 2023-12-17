@@ -125,7 +125,7 @@ const projects = () => {
     <>
       <Head>
         <title>TanzirIbneAli | Projects Page</title>
-        <meta name="description" content="any description" />
+        <meta name="description" content="This Portfolio is build with ❤ by Tanzir Ibne Ali" />
       </Head>
       <Transition />
       <main className="w-full mb-16 flex flex-col items-center justify-center">
