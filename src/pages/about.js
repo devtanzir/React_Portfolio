@@ -6,7 +6,6 @@ import React, { useEffect, useRef } from "react";
 import profile from "../../public/images/profile/tanzir.jpg";
 import { useInView, useMotionValue, useSpring } from "framer-motion";
 import Skills from "@/components/Skills";
-import Experience from "@/components/Experience";
 import Education from "@/components/Education";
 import Transition from "@/components/Transition";
 
@@ -116,7 +115,6 @@ const about = () => {
           </div>
 
           <Skills />
-          <Experience />
           <Education/>
         </Layout>
       </main>

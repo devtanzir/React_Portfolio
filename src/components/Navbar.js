@@ -136,7 +136,7 @@ const Navbar = () => {
           <FacebookIcon />
         </motion.a>
         <motion.a
-          href="https://codepen.io/TANZIR-IBNE-ALI/pens/showcase"
+          href="https://codepen.io/tanziribneali/pens/showcase"
           target={"_blank"}
           whileHover={{ y: -2 }}
           className="w-6 mx-3"
@@ -215,7 +215,7 @@ const Navbar = () => {
                 <FacebookIcon />
               </motion.a>
               <motion.a
-                href="https://codepen.io/TANZIR-IBNE-ALI/pens/showcase"
+                href="https://codepen.io/tanziribneali/pens/showcase"
                 target={"_blank"}
                 whileHover={{ y: -2 }}
                 className="w-6 mx-3 sm:mx-1"
